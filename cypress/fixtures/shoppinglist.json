@@ -1,0 +1,10 @@
+[
+  {"name": "Brocolli", "category": "Frozen"},
+  {"name": "Milk", "category": "Dairy"},
+  {"name": "Apples", "category": "Fruits"},
+  {"name": "Cheese", "category": "Dairy"},
+  {"name": "Aubergine", "category": "Vegetables"},
+  {"name": "Onions", "category": "Vegetables"},
+  {"name": "Spinach", "category": "Vegetables"}
+
+]
