@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
-  },
-  "keywords": [],
+  "cypress:open": "cypress open",
+  "cypress:run": "cypress run --headless --reporter mocha-junit-reporter --reporter-options \"mochaFile=cypress/results/results-[hash].xml\""
+},
+"keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",

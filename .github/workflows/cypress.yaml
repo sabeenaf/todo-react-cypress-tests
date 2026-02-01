@@ -30,11 +30,7 @@ jobs:
 
       # Run Cypress tests with JUnit reporter
       - name: Run Cypress tests
-        run: |
-          mkdir -p cypress/results
-          npx cypress run --headless \
-            --reporter mocha-junit-reporter \
-            --reporter-options "mochaFile=cypress/results/results-[hash].xml"
+        run: npm run cypress:run
 
       # Upload screenshots, videos, and test results as artifacts
       - name: Upload Cypress artifacts
