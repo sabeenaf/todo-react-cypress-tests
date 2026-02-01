@@ -32,7 +32,7 @@ jobs:
       - name: Run Cypress tests
         run: |
           mkdir -p cypress/results
-          npx cypress run \
+          npx cypress run --headless \
             --reporter mocha-junit-reporter \
             --reporter-options "mochaFile=cypress/results/results-[hash].xml"
 
