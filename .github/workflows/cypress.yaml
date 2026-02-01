@@ -31,6 +31,8 @@ jobs:
       # Run Cypress tests with JUnit reporter
       - name: Run Cypress tests
         run: npm run cypress:run
+        env:    
+          CI: true
 
       # Upload screenshots, videos, and test results as artifacts
       - name: Upload Cypress artifacts
