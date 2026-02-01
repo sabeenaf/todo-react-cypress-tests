@@ -11,7 +11,7 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     env:
-      CYPRESS_INSTALL_BINARY: 15.6.0  # Install Cypress 15.6
+      CYPRESS_INSTALL_BINARY: 15.9.0  # Install Cypress 15.9.0
 
     steps:
       # Checkout code
