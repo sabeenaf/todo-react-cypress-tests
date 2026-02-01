@@ -10,9 +10,7 @@ describe('Shopping List - Total Active/Pending Items', () => {
 
     cy.fixture('shoppinglist.json').then((items) => {
       cy.get('.todo-list li').should('have.length', items.length)
-      const completedCount = 2
-
-    })
+    
 
     // Check off two items on list
     cy.get('.todo-list li').eq(0).find('.toggle').check()
@@ -22,7 +20,7 @@ describe('Shopping List - Total Active/Pending Items', () => {
     cy.get('.todo-count')
       .should('contain.text', `${items.length - 2} items left!`)
   
-    
+    })
 
   })
 })

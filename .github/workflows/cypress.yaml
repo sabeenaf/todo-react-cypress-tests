@@ -1,0 +1,46 @@
+name: Cypress CI
+
+on:
+  push:
+    branches:
+      - main
+      - '*'          
+  pull_request:
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    env:
+      CYPRESS_INSTALL_BINARY: 15.9.0  # Install Cypress 15.9.0
+
+    steps:
+      # Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Setup Node.js compatible with Cypress
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.16
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run Cypress tests with JUnit reporter
+      - name: Run Cypress tests
+        run: npm run cypress:run
+        env:    
+          CI: true
+
+      # Upload screenshots, videos, and test results as artifacts
+      - name: Upload Cypress artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/screenshots
+            cypress/videos
+            cypress/results

@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "cypress:open": "cypress open",
+  "cypress:run": "cypress run --headless --reporter mocha-junit-reporter --reporter-options \"mochaFile=cypress/results/results-[hash].xml\""
+},
+"keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "cypress": "^15.6.0"
+    "cypress": "^15.9.0",
+    "mocha-junit-reporter": "^2.0.0"
   }
 }
